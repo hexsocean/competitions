@@ -1,0 +1,10 @@
+{
+  "files.associations": {
+    "*.inl": "plaintext",
+    "*.jl": "julia",
+    "*.lua": "lua",
+    "fstream": "cpp",
+    "xiosbase": "cpp",
+    "utility": "cpp"
+  }
+}
