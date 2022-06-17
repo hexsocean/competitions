@@ -1,10 +1,9 @@
+#include <fstream>
 #include <iostream>
+
 using namespace std;
 
-FILE *in = nullptr;
-FILE *out = nullptr;
-
-int next(int n) { return n % 2 == 0 ? n / 2 : n & 3 + 1; }
+int next(int n) { return (n % 2 == 0) ? (n / 2) : (n * 3 + 1); }
 
 int step(int n) {
   int steps = 0;
@@ -16,8 +15,9 @@ int step(int n) {
 }
 
 int main() {
-  freopen_s(&in, "hailin.txt", "r", stdin);
-  freopen_s(&out, "hailout.txt", "w", stdout);
+  ifstream cin("hailin.txt");
+  ofstream cout("hailout.txt");
+
   int n = 1;
   cin >> n;
   while (n != 0) {

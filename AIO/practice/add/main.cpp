@@ -1,12 +1,12 @@
+#include <fstream>
 #include <iostream>
+
 using namespace std;
 
-FILE *in = nullptr;
-FILE *out = nullptr;
-
 int main() {
-  freopen_s(&in, "addin.txt", "r", stdin);
-  freopen_s(&out, "addout.txt", "w", stdout);
+  ifstream cin("addin.txt");
+  ofstream cout("addout.txt");
+
   int a, b = 0;
   cin >> a >> b;
   cout << a + b;

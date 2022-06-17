@@ -1,12 +1,11 @@
+#include <fstream>
 #include <iostream>
+
 using namespace std;
 
-FILE *in = nullptr;
-FILE *out = nullptr;
-
 int main() {
-  freopen_s(&in, "cultin.txt", "r", stdin);
-  freopen_s(&out, "cultout.txt", "w", stdout);
+  ifstream cin("cultin.txt");
+  ofstream cout("cultout.txt");
   int n = 0;
   cin >> n;
 
